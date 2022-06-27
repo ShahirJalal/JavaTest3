@@ -51,7 +51,7 @@ public class MyFrame extends JFrame implements ActionListener{
             System.out.println("file saved");
         }
         if(e.getSource() == exitItem) {
-            System.out.println("byeeee!");
+            System.exit(0);
         }
     }
     
