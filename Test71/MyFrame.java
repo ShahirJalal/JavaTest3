@@ -6,14 +6,25 @@ import javax.swing.*;
 
 public class MyFrame extends JFrame implements ActionListener{
 
+    JMenuBar menuBar;
+    JMenu fileMenu;
+    JMenu editMenu;
+    JMenu helpMenu;
     JMenuItem loadItem;
     JMenuItem saveItem;
     JMenuItem exitItem;
+    ImageIcon loadIcon;
+    ImageIcon saveIcon;
+    ImageIcon exitIcon;
 
     MyFrame() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(500, 500);
         this.setLayout(new FlowLayout());
+
+        loadIcon = new ImageIcon("Test71/Load.png");
+        saveIcon = new ImageIcon("Test71/Save.png");
+        exitIcon = new ImageIcon("Test71/Exit.png");
 
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("File");
@@ -27,6 +38,17 @@ public class MyFrame extends JFrame implements ActionListener{
         loadItem.addActionListener(this);
         saveItem.addActionListener(this);
         exitItem.addActionListener(this);
+
+        loadItem.setIcon(loadIcon);
+        saveItem.setIcon(saveIcon);
+        exitItem.setIcon(exitIcon);
+
+        fileMenu.setMnemonic(KeyEvent.VK_F); // Alt + f for file
+        editMenu.setMnemonic(KeyEvent.VK_E); // L for load
+        helpMenu.setMnemonic(KeyEvent.VK_H); // L for load
+        loadItem.setMnemonic(KeyEvent.VK_L); // L for load
+        saveItem.setMnemonic(KeyEvent.VK_S); // L for load
+        exitItem.setMnemonic(KeyEvent.VK_E); // L for load
 
         fileMenu.add(loadItem);
         fileMenu.add(saveItem);
