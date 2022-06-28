@@ -16,6 +16,16 @@ public class MyFrame extends JFrame implements ActionListener{
         button = new JButton();
         button.addActionListener(this);
 
+        this.add(button);
+        this.pack();
+        this.setVisible(true);
+    }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == button) {
+            
+        }     
+    }
     
 }
