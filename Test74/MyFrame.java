@@ -26,4 +26,21 @@ public class MyFrame extends JFrame implements KeyListener{
 		this.setVisible(true);
 	}
 
+	@Override
+	public void keyTyped(KeyEvent e) {
+		//keyTyped = Invoked when a key is typed. Uses KeyChar, char output
+		switch(e.getKeyChar()) {
+			case 'a': label.setLocation(label.getX()-10, label.getY());
+				break;
+			case 'w': label.setLocation(label.getX(), label.getY()-10);
+				break;
+			case 's': label.setLocation(label.getX(), label.getY()+10);
+				break;
+			case 'd': label.setLocation(label.getX()+10, label.getY());
+				break;
+		}
+		
+	}
+
+
 }
