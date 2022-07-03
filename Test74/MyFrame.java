@@ -1,3 +1,5 @@
+package Test74;
+
 import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
