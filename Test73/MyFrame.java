@@ -1,3 +1,5 @@
+package Test73;
+
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
